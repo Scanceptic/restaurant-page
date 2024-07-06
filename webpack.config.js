@@ -3,15 +3,22 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	entry: "./src/index.js",
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: "Restaurant Page",
-            template: "./src/index.html",
-        }),
-    ],
+	devTool: "source-map",
+	devServer: {
+		static: "./dist",
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Restaurant Page",
+			template: "./src/index.html",
+		}),
+	],
 	output: {
-		filename: "main.js",
+		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "dist"),
-        clean: true,
+		clean: true,
+	},
+	optimization: {
+		runtimeChunk: "single",
 	},
 };
