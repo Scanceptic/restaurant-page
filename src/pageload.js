@@ -39,6 +39,4 @@ export default function pageload() {
 	container.appendChild(col2);
 	content.appendChild(headline_div);
 	content.appendChild(container);
-
-	return content;
 }
