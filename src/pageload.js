@@ -11,25 +11,26 @@ export default function pageload() {
 
 	const col1 = document.createElement("div");
 	col1.classList.add("col");
+	col1.id = "col1";
 
 	const col2 = document.createElement("div");
 	col2.classList.add("col");
+	col2.id = "col2";
 
 	try {
-		const myImage = new Image();
-		myImage.src = Image;
-		myImage.alt = "Mozzarella and Tomato on a baguette slice";
-		col1.appendChild(myImage);
+		const myIcon = new Image();
+		myIcon.src = Image;
+		//myIcon.alt = "Mozzarella and Tomato on a baguette slice";
+		col1.appendChild(myIcon);
 	} catch {
-		try {
-			const myImage = document.createElement("img");
+		/* const myImage = document.createElement("img");
 			myImage.src =
 				"https://images.unsplash.com/photo-1708980108318-4b843e243080";
 			myImage.alt = "Mozzarella and Tomato on a baguette slice";
 			col1.appendChild(myImage);
-		} catch {
-			console.log("Image load failed");
-		}
+        */
+
+		console.log("Image load failed");
 	}
 
 	const attribution = document.createElement("p");

@@ -59,6 +59,10 @@ nav button {
 	justify-content: center;
 }
 
+#col1 {
+    background: url("./bistro.jpg");
+}
+
 img {
 	max-width: 100%;
 }
