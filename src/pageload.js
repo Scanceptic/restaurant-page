@@ -1,4 +1,5 @@
 import Image from "./bistro.jpg";
+import "./style.css";
 
 export default function pageload() {
 	const content = document.querySelector("#content");
@@ -11,27 +12,24 @@ export default function pageload() {
 
 	const container = document.createElement("div");
 	container.classList.add("container");
-	const co1l = document.createElement("div");
+	const col1 = document.createElement("div");
 	col1.classList.add("col1");
 	container.appendChild(col1);
-	const co12 = document.createElement("div");
+	const col2 = document.createElement("div");
 	col2.classList.add("col2");
 	container.appendChild(col2);
 
-	const myImage = new Image();
-	myImage.src = Image;
-	myImage.alt = "Mozzarella and Tomato on a baguette slice";
-	col1.appendChild(myImage);
+	try {
+		const myImage = new Image();
+		myImage.src = Image;
+		//myImage.alt = "Mozzarella and Tomato on a baguette slice";
+		col1.appendChild(myImage);
+	} catch {
+		console.log("Image load failed");
+	}
+
 	const attribution = document.createElement("p");
-	const attribution_link = document.createElement("a");
-	attribution_link.textContent = "Vlado Chabal";
-	attribution_link.href =
-		"https://unsplash.com/@vlado095?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
-	const unsplash_link = document.createElement("a");
-	unsplash_link.textContent = "Unsplash";
-	unsplash_link.href =
-		"https://unsplash.com/photos/a-piece-of-bread-topped-with-cheese-and-vegetables-nsaEvkk7d1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
-	attribution.textContent = `Photo by ${attribution_link} on ${unsplash_link}`;
+	attribution.innerHTML = `Photo by <a href="https://unsplash.com/@vlado095?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vlado Chabal</a> on <a href="https://unsplash.com/photos/a-piece-of-bread-topped-with-cheese-and-vegetables-nsaEvkk7d1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>`;
 	col1.appendChild(attribution);
 
 	const restaurant_text = document.createElement("p");
