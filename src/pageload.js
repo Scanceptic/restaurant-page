@@ -1,3 +1,5 @@
+import Image from "./bistro.jpg";
+
 export default function pageload() {
 	const content = document.querySelector("#content");
 
@@ -16,10 +18,10 @@ export default function pageload() {
 	col2.classList.add("col2");
 	container.appendChild(col2);
 
-	const image = document.createElement("img");
-	image.src = "bistro.jpg";
-	image.alt = "Mozzarella and Tomato on a baguette slice";
-	col1.appendChild(image);
+	const myImage = new Image();
+	myImage.src = Image;
+	myImage.alt = "Mozzarella and Tomato on a baguette slice";
+	col1.appendChild(myImage);
 	const attribution = document.createElement("p");
 	const attribution_link = document.createElement("a");
 	attribution_link.textContent = "Vlado Chabal";
