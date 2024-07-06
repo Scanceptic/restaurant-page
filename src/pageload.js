@@ -1,5 +1,4 @@
 import Image from "./bistro.jpg";
-import "./style.css";
 
 export default function pageload() {
 	const content = document.querySelector("#content");
@@ -12,17 +11,17 @@ export default function pageload() {
 
 	const container = document.createElement("div");
 	container.classList.add("container");
+
 	const col1 = document.createElement("div");
 	col1.classList.add("col1");
-	container.appendChild(col1);
+
 	const col2 = document.createElement("div");
 	col2.classList.add("col2");
-	container.appendChild(col2);
 
 	try {
 		const myImage = new Image();
 		myImage.src = Image;
-		//myImage.alt = "Mozzarella and Tomato on a baguette slice";
+		myImage.alt = "Mozzarella and Tomato on a baguette slice";
 		col1.appendChild(myImage);
 	} catch {
 		console.log("Image load failed");
@@ -37,5 +36,9 @@ export default function pageload() {
 		"Larry's Bistro is the best place to go for premium crab, top-quality lobster, and a whole lot more!";
 	col2.appendChild(restaurant_text);
 
+    container.appendChild(headline_div);
+	container.appendChild(col1);
+	container.appendChild(col2);
+    
 	return container;
 }
