@@ -1,5 +1,5 @@
 import "./style.css";
-import Image from "./bistro.jpg";
 import pageload from "./pageload.js";
 
-pageload();
+const content = document.querySelector("#content");
+content.appendChild(pageload());

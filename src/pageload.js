@@ -39,5 +39,5 @@ export default function pageload() {
 		"Larry's Bistro is the best place to go for premium crab, top-quality lobster, and a whole lot more!";
 	col2.appendChild(restaurant_text);
 
-	content.appendChild(container);
+	return container;
 }
