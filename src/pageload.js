@@ -18,9 +18,9 @@ export default function pageload() {
 	col2.id = "col2";
 
 	try {
-		const myIcon = new Image();
+		const myIcon = document.createElement("img");
 		myIcon.src = Image;
-		//myIcon.alt = "Mozzarella and Tomato on a baguette slice";
+		myIcon.alt = "Mozzarella and Tomato on a baguette slice";
 		col1.appendChild(myIcon);
 	} catch {
 		/* const myImage = document.createElement("img");
