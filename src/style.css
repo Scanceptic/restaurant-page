@@ -10,6 +10,11 @@ body {
 	box-sizing: border-box;
 }
 
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
 .headline {
 	background-color: aliceblue;
 }
