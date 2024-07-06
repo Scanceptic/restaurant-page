@@ -21,7 +21,15 @@ export default function pageload() {
 		myImage.alt = "Mozzarella and Tomato on a baguette slice";
 		col1.appendChild(myImage);
 	} catch {
-		console.log("Image load failed");
+		try {
+			const myImage = document.createElement("img");
+			myImage.src =
+				"https://images.unsplash.com/photo-1708980108318-4b843e243080";
+			myImage.alt = "Mozzarella and Tomato on a baguette slice";
+			col1.appendChild(myImage);
+		} catch {
+			console.log("Image load failed");
+		}
 	}
 
 	const attribution = document.createElement("p");
