@@ -9,14 +9,11 @@ export default function pageload() {
 	headline.textContent = "Larry's Lobster Bistro";
 	headline_div.appendChild(headline);
 
-	const container = document.createElement("div");
-	container.classList.add("container");
-
 	const col1 = document.createElement("div");
-	col1.classList.add("col1");
+	col1.classList.add("col");
 
 	const col2 = document.createElement("div");
-	col2.classList.add("col2");
+	col2.classList.add("col");
 
 	try {
 		const myImage = new Image();
@@ -36,9 +33,12 @@ export default function pageload() {
 		"Larry's Bistro is the best place to go for premium crab, top-quality lobster, and a whole lot more!";
 	col2.appendChild(restaurant_text);
 
-    container.appendChild(headline_div);
+	const container = document.createElement("div");
+	container.classList.add("container");
 	container.appendChild(col1);
 	container.appendChild(col2);
-    
-	return container;
+	content.appendChild(headline_div);
+	content.appendChild(container);
+
+	return content;
 }
