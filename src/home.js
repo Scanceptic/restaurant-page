@@ -4,6 +4,7 @@
 */
 
 import Image from "./bistro.jpg";
+import createListItem from "./createListItem";
 
 export default function pageload() {
 	// select div#content
@@ -39,10 +40,24 @@ export default function pageload() {
 	const attribution = document.createElement("p");
 	attribution.innerHTML = `Photo by <a href="https://unsplash.com/@vlado095?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vlado Chabal</a> on <a href="https://unsplash.com/photos/a-piece-of-bread-topped-with-cheese-and-vegetables-nsaEvkk7d1g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>`;
 	col1.appendChild(attribution);
-	// add text to text column (col2)
-	const restaurant_text = document.createElement("p");
-	restaurant_text.textContent =
-		"Larry's Bistro is the best place to go for premium crab, top-quality lobster, and a whole lot more!";
+	// add list to text column (col2)
+	const restaurant_text = document.createElement("ul");
+	createListItem(
+		restaurant_text,
+		"Larry's Bistro is the best place to go for premium crab, top-quality lobster, and a whole lot more!"
+	);
+	createListItem(
+		restaurant_text,
+		"Nestled in the heart of the city, our bistro offers an unforgettable dining experience with the freshest seafood sourced directly from local fishermen."
+	);
+	createListItem(
+		restaurant_text,
+		"Enjoy our chef's signature dishes, crafted with a passion for flavor and an eye for elegance."
+	);
+	createListItem(
+		restaurant_text,
+		"Whether it's a special occasion or a casual meal, Larry's Bistro promises a feast to remember."
+	);
 	col2.appendChild(restaurant_text);
 	// append all the elements to content
 	const container = document.createElement("div");
