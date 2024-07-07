@@ -33,9 +33,9 @@ darkmodebtn.addEventListener("click", () => {
 	const darkmodeicon = document.querySelector("#darkmodeicon");
 	// if currently lightmode switch to dark
 	if (lightmode === true) {
-		document.root.style.setProperty("--bg-color-primary", "#525252");
-		document.root.style.setProperty("--bg-color-secondary", "#525252");
-		document.root.style.setProperty("--bg-color-highlight", "#525252");
+		document.root.style.setProperty("--bg-color-primary", "#262626");
+		document.root.style.setProperty("--bg-color-secondary", "#0a0a0a");
+		document.root.style.setProperty("--bg-color-highlight", "#171717");
 		document.root.style.setProperty("--text-color-primary", "#ffffff");
 		document.root.style.setProperty("--text-color-secondary", "#ffffff");
 		document.root.style.setProperty("--text-color-highlight", "#ffffff");
