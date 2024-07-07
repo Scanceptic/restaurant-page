@@ -4,7 +4,7 @@
 	accessed through menu button on navbar
 */
 
-import Image from "./bistro.jpg";
+import Image from "./images/bistro.jpg";
 
 export default function menu() {
 	// select div#content

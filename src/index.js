@@ -33,28 +33,30 @@ darkmodebtn.addEventListener("click", () => {
 	const darkmodeicon = document.querySelector("#darkmodeicon");
 	// if currently lightmode switch to dark
 	if (lightmode === true) {
-		document.root.style.setProperty("--bg-color-primary", "#262626");
-		document.root.style.setProperty("--bg-color-secondary", "#0a0a0a");
-		document.root.style.setProperty("--bg-color-highlight", "#171717");
-		document.root.style.setProperty("--text-color-primary", "#ffffff");
-		document.root.style.setProperty("--text-color-secondary", "#ffffff");
-		document.root.style.setProperty("--text-color-highlight", "#ffffff");
+		root.style.setProperty("--bg-color-primary", "#262626");
+		root.style.setProperty("--bg-color-secondary", "#0a0a0a");
+		root.style.setProperty("--bg-color-highlight", "#525252");
+		root.style.setProperty("--text-color-primary", "#ffffff");
+		root.style.setProperty("--text-color-secondary", "#ffffff");
+		root.style.setProperty("--text-color-highlight", "#ffffff");
+		root.style.setProperty("--border-color", "#ffffff");
 
 		// flip button icon color
-		darkmodeicon.setAttribute("src", "./src/images/darkmodeicon.svg");
+		darkmodeicon.setAttribute("src", "./images/darkmodeicon.svg");
 		// flip state to darkmode
 		lightmode = false;
 	} else if (lightmode === false) {
 		// else if currently darkmode switch to light
-		document.root.style.setProperty("--bg-color-primary", "#f0fdf4");
-		document.root.style.setProperty("--bg-color-secondary", "#15803d");
-		document.root.style.setProperty("--bg-color-highlight", "#4ade80");
-		document.root.style.setProperty("--text-color-primary", "#000000");
-		document.root.style.setProperty("--text-color-secondary", "#ffffff");
-		document.root.style.setProperty("--text-color-highlight", "#000000");
+		root.style.setProperty("--bg-color-primary", "#10b981");
+		root.style.setProperty("--bg-color-secondary", "#047857");
+		root.style.setProperty("--bg-color-highlight", "#6ee7b7");
+		root.style.setProperty("--text-color-primary", "#000000");
+		root.style.setProperty("--text-color-secondary", "#ffffff");
+		root.style.setProperty("--text-color-highlight", "#000000");
+		root.style.setProperty("--border-color", "#000000");
 
 		// flip button icon color
-		darkmodeicon.setAttribute("src", "./src/images/lightmodeicon.svg");
+		darkmodeicon.setAttribute("src", "./images/lightmodeicon.svg");
 		// flip state to lightmode
 		lightmode = true;
 	}

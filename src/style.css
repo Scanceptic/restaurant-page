@@ -1,21 +1,11 @@
 :root {
-	--green50: #ecfdf5;
-	--green100: #d1fae5;
-	--green200: #a7f3d0;
-	--green300: #6ee7b7;
-	--green400: #34d399;
-	--green500: #10b981;
-	--green600: #059669;
-	--green700: #047857;
-	--green800: #065f46;
-	--green900: #064e3b;
-	--green950: #022c22;
-	--bg-color-primary: #f0fdf4;
-	--bg-color-secondary: #15803d;
-	--bg-color-highlight: #4ade80;
+	--bg-color-primary: #10b981;
+	--bg-color-secondary: #047857;
+	--bg-color-highlight: #6ee7b7;
 	--text-color-primary: #000000;
 	--text-color-secondary: #ffffff;
 	--text-color-highlight: #000000;
+	--border-color: #000000;
 }
 
 body {
@@ -31,7 +21,7 @@ body {
 
 * {
 	box-sizing: border-box;
-	border: 1px solid black;
+	border: 1px solid var(--border-color);
 }
 
 header {
@@ -78,7 +68,8 @@ button:hover {
 }
 
 #headline {
-	background-color: lightcoral;
+	background-color: var(--bg-color-secondary);
+	color: var(--text-color-secondary);
 	width: 100%;
 	padding: 20px 50px;
 	margin: 50px 0;
@@ -92,7 +83,8 @@ button:hover {
 	min-height: 400px;
 	height: 70vh;
 	padding: 50px;
-	background-color: lightgrey;
+	background-color: var(--bg-color-primary);
+	color: var(--text-color-primary);
 }
 
 .col {
@@ -101,11 +93,7 @@ button:hover {
 	align-items: center;
 	justify-content: center;
 }
-/*
-#col1 {
-    background: url("./bistro.jpg");
-}
-*/
+
 img {
 	max-width: 100%;
 }

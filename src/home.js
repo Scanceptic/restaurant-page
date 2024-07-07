@@ -3,7 +3,7 @@
 	also accessed through home button on navbar
 */
 
-import Image from "./bistro.jpg";
+import Image from "./images/bistro.jpg";
 import createListItem from "./createListItem";
 
 export default function pageload() {
