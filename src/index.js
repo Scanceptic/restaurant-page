@@ -27,14 +27,14 @@ aboutbtn.addEventListener("click", () => {
 	about();
 });
 /* Darkmode button */
-const darkmodebtn = document.querySelector("#darkmode");
+const darkmodebtn = document.querySelector("#darkmodebtn");
+const darkmodeicon = document.querySelector("#darkmodeicon");
+darkmodeicon.setAttribute("src", lightmodeimage);
 let lightmode = true;
-
-
 
 darkmodebtn.addEventListener("click", () => {
 	const root = document.querySelector(":root");
-	const darkmodeicon = document.querySelector("#darkmodeicon");
+
 	// if currently lightmode switch to dark
 	if (lightmode === true) {
 		root.style.setProperty("--bg-color-primary", "#262626");
@@ -46,7 +46,7 @@ darkmodebtn.addEventListener("click", () => {
 		root.style.setProperty("--border-color", "#ffffff");
 
 		// flip button icon color
-		darkmodeicon.setAttribute("src", "./images/darkmodeicon.svg");
+		darkmodeicon.setAttribute("src", darkmodeimage);
 		// flip state to darkmode
 		lightmode = false;
 	} else if (lightmode === false) {
@@ -60,7 +60,7 @@ darkmodebtn.addEventListener("click", () => {
 		root.style.setProperty("--border-color", "#000000");
 
 		// flip button icon color
-		darkmodeicon.setAttribute("src", "./images/lightmodeicon.svg");
+		darkmodeicon.setAttribute("src", lightmodeimage);
 		// flip state to lightmode
 		lightmode = true;
 	}

@@ -17,6 +17,7 @@ body {
 	align-items: center;
 	background-color: var(--bg-color-primary);
 	color: var(--text-color-primary);
+	font-family: sans-serif;
 }
 
 * {
@@ -55,6 +56,7 @@ button {
 	background-color: var(--bg-color-highlight);
 	color: var(--text-color-highlight);
 	border: 1px solid var(--border-color);
+	font-weight: 700;
 }
 
 button:hover {
@@ -62,11 +64,16 @@ button:hover {
 	cursor: pointer;
 }
 
-#darkmode {
+#darkmodebtn {
 	padding: 10px;
 	width: 50px;
 	height: 50px;
-	border-radius: 50%;
+	border-radius: 25px;
+	font-weight: 300;
+}
+
+#darkmodebtn:hover {
+	background-color: var(--bg-color-primary);
 }
 
 #content {
@@ -125,7 +132,11 @@ button:hover {
 	border-left: none;
 }
 
+#col1 > img {
+	border: 1px solid var(--border-color);
+}
+
 img {
 	max-width: 100%;
-	border: 1px solid var(--border-color);
+	max-height: 100%;
 }
