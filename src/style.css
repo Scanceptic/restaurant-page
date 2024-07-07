@@ -1,3 +1,23 @@
+:root {
+	--green50: #ecfdf5;
+	--green100: #d1fae5;
+	--green200: #a7f3d0;
+	--green300: #6ee7b7;
+	--green400: #34d399;
+	--green500: #10b981;
+	--green600: #059669;
+	--green700: #047857;
+	--green800: #065f46;
+	--green900: #064e3b;
+	--green950: #022c22;
+	--bg-color-primary: #f0fdf4;
+	--bg-color-secondary: #15803d;
+	--bg-color-highlight: #4ade80;
+	--text-color-primary: #000000;
+	--text-color-secondary: #ffffff;
+	--text-color-highlight: #000000;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -5,6 +25,8 @@ body {
 	margin: 0;
 	padding: 0;
 	align-items: center;
+	background-color: var(--bg-color-primary);
+	color: var(--text-color-primary);
 }
 
 * {
@@ -13,18 +35,39 @@ body {
 }
 
 header {
-	width: 80%;
-	margin-top: 50px;
+	width: 100%;
+	padding: 20px;
+	background-color: var(--bg-color-secondary);
+	color: var(--text-color-secondary);
+	display: flex;
+	justify-content: space-between;
 }
 
 nav {
 	display: flex;
 	justify-content: space-around;
+	width: 80%;
 }
 
-nav button {
+button {
+	height: 50px;
+	width: fit-content;
 	padding: 10px 30px;
 	border-radius: 5px;
+	background-color: var(--bg-color-highlight);
+	color: var(--text-color-highlight);
+}
+
+button:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#darkmode {
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
 }
 
 #content {
