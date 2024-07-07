@@ -2,6 +2,8 @@ import home from "./home.js";
 import menu from "./menu.js";
 import about from "./about.js";
 import "./style.css";
+import darkmodeimage from "./images/darkmodeicon.svg";
+import lightmodeimage from "./images/lightmodeicon.svg";
 
 home();
 
@@ -27,6 +29,8 @@ aboutbtn.addEventListener("click", () => {
 /* Darkmode button */
 const darkmodebtn = document.querySelector("#darkmode");
 let lightmode = true;
+
+
 
 darkmodebtn.addEventListener("click", () => {
 	const root = document.querySelector(":root");

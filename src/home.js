@@ -62,6 +62,11 @@ export default function pageload() {
 	// append all the elements to content
 	const container = document.createElement("div");
 	container.classList.add("container");
+	// create container heading
+	const container_heading = document.createElement("h2");
+	container_heading.id = "containerheading";
+	container_heading.textContent = "Welcome to Larry's Lobster Bistro Website!";
+	container.appendChild(container_heading);
 	container.appendChild(col1);
 	container.appendChild(col2);
 	content.appendChild(headline_div);
