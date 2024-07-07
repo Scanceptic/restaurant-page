@@ -13,6 +13,13 @@ export default function pageload() {
 	while (content.firstChild) {
 		content.removeChild(content.firstChild);
 	}
+	// bold active tab
+	const homebtn = document.getElementById("home");
+	homebtn.style.fontWeight = "700";
+	const menubtn = document.getElementById("menu");
+	menubtn.style.fontWeight = "300";
+	const aboutbtn = document.getElementById("about");
+	aboutbtn.style.fontWeight = "300";
 	// create headline
 	const headline_div = document.createElement("div");
 	headline_div.id = "headline";

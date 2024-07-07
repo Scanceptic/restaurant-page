@@ -50,7 +50,7 @@ nav {
 
 button {
 	height: 50px;
-	width: fit-content;
+	width: 100px;
 	padding: 10px 30px;
 	border-radius: 5px;
 	background-color: var(--bg-color-highlight);

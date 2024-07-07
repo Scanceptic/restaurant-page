@@ -65,3 +65,5 @@ darkmodebtn.addEventListener("click", () => {
 		lightmode = true;
 	}
 });
+
+
