@@ -24,3 +24,38 @@ menubtn.addEventListener("click", () => {
 aboutbtn.addEventListener("click", () => {
 	about();
 });
+/* Darkmode button */
+const darkmodebtn = document.querySelector("#darkmode");
+let lightmode = true;
+
+darkmodebtn.addEventListener("click", () => {
+	const root = document.querySelector(":root");
+	const darkmodeicon = document.querySelector("#darkmodeicon");
+	// if currently lightmode switch to dark
+	if (lightmode === true) {
+		document.root.style.setProperty("--bg-color-primary", "#525252");
+		document.root.style.setProperty("--bg-color-secondary", "#525252");
+		document.root.style.setProperty("--bg-color-highlight", "#525252");
+		document.root.style.setProperty("--text-color-primary", "#ffffff");
+		document.root.style.setProperty("--text-color-secondary", "#ffffff");
+		document.root.style.setProperty("--text-color-highlight", "#ffffff");
+
+		// flip button icon color
+		darkmodeicon.setAttribute("src", "./src/images/darkmodeicon.svg");
+		// flip state to darkmode
+		lightmode = false;
+	} else if (lightmode === false) {
+		// else if currently darkmode switch to light
+		document.root.style.setProperty("--bg-color-primary", "#f0fdf4");
+		document.root.style.setProperty("--bg-color-secondary", "#15803d");
+		document.root.style.setProperty("--bg-color-highlight", "#4ade80");
+		document.root.style.setProperty("--text-color-primary", "#000000");
+		document.root.style.setProperty("--text-color-secondary", "#ffffff");
+		document.root.style.setProperty("--text-color-highlight", "#000000");
+
+		// flip button icon color
+		darkmodeicon.setAttribute("src", "./src/images/lightmodeicon.svg");
+		// flip state to lightmode
+		lightmode = true;
+	}
+});
